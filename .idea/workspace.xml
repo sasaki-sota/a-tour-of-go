@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f4bee157-5c6f-4761-8f5a-b405e5d5432e" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/go" />
+  <component name="ProjectId" id="1gnTBxefMoEZGw8bRd3jPqBxg3X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Module.GOPATH.is.expanded" value="false" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="640" y="202" key="#GOPATH" timestamp="1598749251912">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="640" y="202" key="#GOPATH/0.23.1680.1027/-1920.-84.1920.1057@0.23.1680.1027" timestamp="1598749251912" />
+    <state x="574" y="345" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1598750083452">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="574" y="345" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1680.1027/-1920.-84.1920.1057@0.23.1680.1027" timestamp="1598750083452" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1598800371835">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.23.1680.1027/-1920.-84.1920.1057@0.23.1680.1027" timestamp="1598800371835" />
+  </component>
+</project>
