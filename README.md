@@ -37,4 +37,93 @@
 **変数に初期値を書かないとデフォルトの与えられる**  
 `var i int` -> `fmt.Plintf("%v", i)`となり出力として**0が出力**される
 
+### 型変換
+    シンプルに記述する場合
+    i := 42
+    f := float64(i)
+    u := uint(f)
+**型変換は明示的な変換が必要になる**  
+##### :=で型推論した場合
+    i := 42           // int
+    f := 3.142        // float64
+    g := 0.867 + 0.5i // complex128
+と**自動で型を調整してくれる**  
+
+## 定数(const)
+定数の変数の先頭を大文字にすることが理想的   -> `const Hoge = "hello"`  
+**文字(character)、文字列(string)、boolean、数値(numeric)のみで使える**  
+型推論はできない
+
+##### << と >>の意味
+> https://teratail.com/questions/18602  
+上記を参考に2真数に変更した際に値をかえる  
+
+### For文
+    func main() {
+    	sum := 0
+    	for i := 0; i < 10; i++ {
+    		sum += i
+    	}
+    	
+    i := 0 初期化ステートメント: 最初のイテレーション(繰り返し)の前に初期化が実行されます
+    i < 10 条件式: イテレーション毎に評価されます
+    i++ 後処理ステートメント: イテレーション毎の最後に実行されます
+**※初期化と後処理ステートメントの記述は任意**  
+-> 
+
+    func main() {
+    	sum := 1
+    	for ; sum < 1000; {
+    		sum += sum
+    	}
+
+**※while文もfor文でgoでは表す**  
+
+    func main() {
+    	sum := 1
+    	for sum < 1000 {
+    		sum += sum
+    	}
+
+**無限ループの書き方**  
+    
+    func main() {
+    	for {
+    	}
+    }
+
+##### Sqrt関数
+`func Sqrt(x float64) float64` -> Sqrtは、xの平方根を返す
+
+##### Pow関数
+`func Pow(x, y float64) float64`  
+ -> Powは、x**y、ベースxをy値で累乗した値を返す
+
+### If文
+**Ifのステートメント**  
+If文の部分に簡単なステートメントを書くことができるようになっている
+
+    func pow(x, n, lim float64) float64 {
+    	if v := math.Pow(x, n); v < lim {
+    		return v
+    	}
+    	return lim
+    }
+
+### Switch文
+1. **breakは自動的に提供される**  
+1. **caseのものは定数でなくても平気**  
+    
+    
+    パソコンのOSを知るプログラム
+    func main()  {
+    	fmt.Print("Go runs on")
+    	switch os := runtime.GOOS; os {
+    	case "darwin":
+    		fmt.Println("os x.")
+    	case "linux":
+    		fmt.Println("Linux.")
+    	default:
+    		fmt.Printf("%s.\n", os)
+    	}
 
