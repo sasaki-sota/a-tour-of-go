@@ -143,3 +143,102 @@ If文の部分に簡単なステートメントを書くことができるよう
     	fmt.Println("done")
     }
 このように記述することで9, 8, 7, ....と出力される
+
+## ポインタ
+**正直全然理解することができないので参考サイトを参照**  
+>図がわかりやすいもの
+>https://note.com/aki2020/n/n9294337b19c8  
+>C言語のやつだけど参考になる  
+>https://qiita.com/tatachiy/items/7856931f4cacf2c5b743  
+>アドレスとポインタ  
+>https://qiita.com/Sekky0905/items/447efa04a95e3fec217f
+
+**ポインタは値のメモリアドレスを指す**  
+公式のサイト
+https://go-tour-jp.appspot.com/moretypes/1
+
+### 構造体(struct)
+**フィールド( field )の集まり**
+
+    type Vertex struct {
+    	X int
+    	Y int
+    }
+    
+    func main() {
+    	fmt.Println(Vertex{1, 2})
+    }
+    と記述すると{1 2}となる
+    
+**ドット(.)を使って今回だったらx, yにアクセスできる**  
+    
+    v := Vertex2{1, 2}
+    	v.x = 4
+    	fmt.Println(v.x)
+
+**ポインタからのアクセス**
+ポインタを利用して呼ぶこともできる  
+    
+    func main() {
+    	v := Vertex{1, 2}
+    	p := &v
+    	p.X = 1e9
+    	fmt.Println(v)
+    }
+
+### 配列(array)
+**int型の配列を10個作成する宣言**->  `var a [10]int`  
+
+    func main() {
+    	var a [2]string
+    	a[0] = "Hello"
+    	a[1] = "World"
+    	fmt.Println(a[0], a[1])
+    	fmt.Println(a)
+    
+    	primes := [6]int{2, 3, 5, 7, 11, 13}
+    	fmt.Println(primes)
+    }
+    
+    結果:
+    Hello World
+    [Hello World]
+    [2 3 5 7 11 13]
+
+####　配列の操作(slice)
+**配列を限定する**
+
+    primes := [6]int{2,3,5,7,11,13}
+    
+    ここの部分で1~４までを取ってくる
+    	var s []int = primes[1:4]
+    	fmt.Println(s)
+    	
+    	結果:
+    	[3 5 7]
+**配列ストラクト**  
+配列の中にオブジェクトが入っているイメージ  
+
+    s := []struct {
+    		i int
+    		b bool
+    	}{
+    		{2, true},
+    		{3, false},
+    		{5, true},
+    		{7, true},
+    		{11, false},
+    		{13, true},
+    	}
+    	fmt.Println(s)
+    	結果:
+    	[{2 true} {3 false} {5 true} {7 true}
+    	 {11 false} {13 true}]
+**スライスのデフォルト**
+スライスするときは、それらの既定値を代わりに使用することで上限または下限を省略することができる
+
+    s = s[:2]
+    	fmt.Println(s)
+    
+    	s = s[1:]
+    	fmt.Println(s)

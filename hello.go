@@ -9,6 +9,6 @@ import (
 //	fmt.Println("Hello world")
 //}
 
-func main()  {
+func main() {
 	fmt.Println("My favorite number is", rand.Intn(10))
 }
