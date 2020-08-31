@@ -125,3 +125,21 @@ If文の部分に簡単なステートメントを書くことができるよう
     		fmt.Printf("%s.\n", os)
     	}
 
+##### Deferメソッド
+**defer へ渡した関数の実行を、呼び出し元の関数の終わり(returnする)まで遅延**
+
+    func main()  {
+    	defer fmt.Println("world")
+    	fmt.Println("hello")
+    }
+
+**stackされる場合**
+
+    func main()  {
+    	fmt.Println("counting")
+    	for i := 0; i < 10; i++ {
+    		defer fmt.Println(i)
+    	}
+    	fmt.Println("done")
+    }
+このように記述することで9, 8, 7, ....と出力される
