@@ -325,3 +325,54 @@ https://go-tour-jp.appspot.com/moretypes/1
     for i := range pow
 
 
+## Maps
+**map はキーと値とを関連付けをする**  
+0 = nil -> nilのマップはキーを持っておらず、キーの追加をすることもできない  
+`make` 関数は指定された型のマップを初期化して、使用可能な状態で返す
+
+    type Vertex struct {
+    	Lat, Long float64
+    }
+    
+    var m map[string]Vertex
+    
+    func main() {
+    	m = make(map[string]Vertex)
+    	m["Bell Labs"] = Vertex{
+    		40.68433, -74.39967,
+    	}
+    	fmt.Println(m["Bell Labs"])
+    }
+    結果：
+    {40.68433 -74.39967}
+    
+**Mapのリテラルにはkey(キー)が必要になってくる**  
+
+    var m = map[string]Vertex{
+    	"Bell Labs": Vertex{
+    		40.68433, -74.39967,
+    	},
+    	"Google": Vertex{
+    		37.42202, -122.08408,
+    	},
+    }
+    結果：
+    map[Bell labs:{40.68433 -74.39967} Google:{37.42202 -122.08408}]
+
+### mapの操作
+**m へ要素(elem)の挿入や更新**
+    
+    m[key] = elem
+
+**要素の取得**  
+
+    elem = m[key]
+    
+**削除**  
+
+    delete(m, key)
+    
+**キーに対する要素が存在するかどうかは、2つの目の値で確認**  
+
+    elem, ok = m[key]
+    存在している場合はtrueになりそれ以外はfalse

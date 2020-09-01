@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	var s []int
 	printSlice3(s)
 
@@ -16,6 +16,6 @@ func main()  {
 	printSlice3(s)
 }
 
-func printSlice3(s []int)  {
+func printSlice3(s []int) {
 	fmt.Printf("len=%d cap=%d %v\n", len(s), cap(s), s)
 }
