@@ -242,3 +242,31 @@ https://go-tour-jp.appspot.com/moretypes/1
     
     	s = s[1:]
     	fmt.Println(s)
+**長さと容量の二つをもっている**  
+
+    s := []int{2, 3, 5, 7, 11, 13}
+    	printSlice(s)
+    
+    	// Slice the slice to give it zero length.
+    	s = s[:0]
+    	printSlice(s)
+    
+    	// Extend its length.
+    	s = s[:4]
+    	printSlice(s)
+    
+    	// Drop its first two values.
+    	s = s[2:]
+    	printSlice(s)
+    	結果:
+    	len=6 cap=6 [2 3 5 7 11 13]
+        len=0 cap=6 []
+        len=4 cap=6 [2 3 5 7]
+        len=2 cap=4 [5 7]
+
+**make関数を使用することでスライスの容量と長さを指定できる**  
+
+    長さのみの指定
+    a := make([]int, 5)  // len(a)=5
+    容量のみの指定
+    b := make([]int, 0, 5) // len(b)=0, cap(b)=5

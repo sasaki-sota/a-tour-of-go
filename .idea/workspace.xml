@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f4bee157-5c6f-4761-8f5a-b405e5d5432e" name="Default Changelist" comment="" />
+    <list default="true" id="f4bee157-5c6f-4761-8f5a-b405e5d5432e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/make.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/no-slices.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/slice-types.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,14 +22,19 @@
     </option>
   </component>
   <component name="GOROOT" path="/usr/local/go" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gnTBxefMoEZGw8bRd3jPqBxg3X" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="configurable.Global.GOPATH.is.expanded" value="true" />
     <property name="configurable.Module.GOPATH.is.expanded" value="false" />
@@ -51,5 +63,9 @@
       <screen x="0" y="23" width="1680" height="1027" />
     </state>
     <state width="600" height="428" key="javadoc.popup/0.23.1680.1027/-1920.-84.1920.1057@0.23.1680.1027" timestamp="1598800371835" />
+    <state x="649" y="310" key="refactoring.ChangeSignatureDialog" timestamp="1598947472364">
+      <screen x="0" y="23" width="1680" height="1027" />
+    </state>
+    <state x="649" y="310" key="refactoring.ChangeSignatureDialog/0.23.1680.1027/-1920.-84.1920.1057@0.23.1680.1027" timestamp="1598947472364" />
   </component>
 </project>
