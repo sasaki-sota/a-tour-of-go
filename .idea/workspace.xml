@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4bee157-5c6f-4761-8f5a-b405e5d5432e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/append.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/range-continud.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/range.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>

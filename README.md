@@ -291,3 +291,37 @@ https://go-tour-jp.appspot.com/moretypes/1
             len=2 cap=2 [0 1]
             len=5 cap=6 [0 1 2 3 4]
 
+## Range
+**スライスや、マップ( map )をひとつずつ反復処理するために使う**  
+-> 変数を二つ用意する必要がある。
+1. index
+1. indexの場所の要素のコピー
+
+
+    var pow = []int{1, 2, 4, 8, 16, 32, 64, 128}
+    
+    func main() {
+    	for i, v := range pow {
+    		fmt.Printf("2**%d = %d\n", i, v)
+    	}
+    }
+    結果:
+    2**0 = 1
+    2**1 = 2
+    2**2 = 4
+    2**3 = 8
+    2**4 = 16
+    2**5 = 32
+    2**6 = 64
+    2**7 = 128
+
+**indexや値は " _ "(アンダーバー) へ代入することで捨てることができるようん笑になる**  
+
+    for i, _ := range pow
+    for _, value := range pow
+    
+    もしインデックスだけが必要なのであれば、2つ目の値を省略
+    
+    for i := range pow
+
+
