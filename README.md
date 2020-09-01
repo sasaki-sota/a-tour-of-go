@@ -270,3 +270,24 @@ https://go-tour-jp.appspot.com/moretypes/1
     a := make([]int, 5)  // len(a)=5
     容量のみの指定
     b := make([]int, 0, 5) // len(b)=0, cap(b)=5
+    
+**append関数で配列の追加をすることができるようになる**
+
+    var s []int
+    	printSlice3(s)
+    
+    	s = append(s, 0)
+    	printSlice3(s)
+    
+    	s = append(s, 1)
+    	printSlice3(s)
+    
+    	s = append(s, 2, 3, 4)
+    	printSlice3(s)
+    	
+    	結果:
+    	len=0 cap=0 []
+            len=1 cap=1 [0]
+            len=2 cap=2 [0 1]
+            len=5 cap=6 [0 1 2 3 4]
+
