@@ -577,3 +577,62 @@ https://go-tour-jp.appspot.com/moretypes/1
             (&{hello}, *main.T)
             hello
 
+
+**値と肩の一致**  
+-> ゼロ個のメソッドを指定されたインターフェース型は、 空のインターフェース   
+1. 空のインターフェースは、任意の型の値を保持できる
+1. 空のインターフェースは、未知の型の値を扱うコードで使用される
+
+
+    func main()  {
+    	var i interface{}
+    	descride(i)
+    
+    	i = 42
+    	descride(i)
+    
+    	i = "hello"
+    	descride(i)
+    }
+    結果:
+    (<nil>, <nil>)
+    (42, int)
+    (hello, string)
+
+### タイプアサーション
+**インターフェースの値の元にある具体的な値を利用する手段を提供**  
+
+    t := i.(T)
+    インターフェースの値 i が具体的な型 T を保持し、基になる T の値を変数 t に代入することを主張
+    
+    iがTを持っていない場合はpanicを起こす
+   
+    t, ok := i.(T)
+    i が T を保持していれば、 t は基になる値になり、 ok は真(true)になる
+    -> ok は偽(false)になり、 t は型 T のゼロ値になり panic は起きない
+
+#### Stringers
+
+    type Stringer interface {
+        String() string
+    }
+    
+    
+ **↓**
+ 
+    type Person struct {
+    	Name string
+    	Age  int
+    }
+    
+    func (p Person) String() string {
+    	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
+    }
+    
+    func main() {
+    	a := Person{"Arthur Dent", 42}
+    	z := Person{"Zaphod Beeblebrox", 9001}
+    	fmt.Println(a, z)
+    }
+
+
