@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 	var i interface{} = "hello"
 
 	s := i.(string)
@@ -17,4 +17,3 @@ func main()  {
 	f = i.(float64)
 	fmt.Println(f)
 }
-

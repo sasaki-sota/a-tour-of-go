@@ -2,11 +2,11 @@ package main
 
 import "fmt"
 
-func descride(i interface{})  {
+func descride(i interface{}) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }
 
-func main()  {
+func main() {
 	var i interface{}
 	descride(i)
 

@@ -16,11 +16,11 @@ func (t *T) M() {
 
 type F float64
 
-func (f F) M()  {
+func (f F) M() {
 	fmt.Println(f)
 }
 
-func main()  {
+func main() {
 	var i I
 
 	i = &T{"Hello"}
@@ -28,6 +28,6 @@ func main()  {
 	i.M()
 }
 
-func descride(i I)  {
+func descride(i I) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }

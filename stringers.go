@@ -4,14 +4,14 @@ import "fmt"
 
 type Person struct {
 	Name string
-	Age int
+	Age  int
 }
 
-func (p Person) String() string  {
+func (p Person) String() string {
 	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
 }
 
-func main()  {
+func main() {
 	a := Person{"Arthur", 42}
 	z := Person{"Zapth Beelebox", 9001}
 	fmt.Println(a, z)

@@ -6,12 +6,12 @@ type I interface {
 	M()
 }
 
-func main()  {
+func main() {
 	var i I
 	descride(i)
 	i.M()
 }
 
-func descride(i I)  {
+func descride(i I) {
 	fmt.Printf("(%v, %T)\n", i, i)
 }

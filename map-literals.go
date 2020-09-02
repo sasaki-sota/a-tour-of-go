@@ -7,14 +7,14 @@ type Vertex8 struct {
 }
 
 var m3 = map[string]Vertex8{
-	"Bell labs": Vertex8{
+	"Bell labs": {
 		40.68433, -74.39967,
 	},
-	"Google": Vertex8{
+	"Google": {
 		37.42202, -122.08408,
 	},
 }
 
-func main()  {
+func main() {
 	fmt.Println(m3)
 }
