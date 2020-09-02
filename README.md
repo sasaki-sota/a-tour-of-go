@@ -427,7 +427,7 @@ https://go-tour-jp.appspot.com/moretypes/1
 
 
 ## メソッド(methods)
-**クラス( class )のしくみはありませんが、型にメソッド( method )を定義できる** 
+**クラス( class )のしくみはありませんが、型にメソッド( method )を定義できる**  
 メソッド -> 特別なレシーバ( receiver )引数を関数に取る  
 レシーバー -> func キーワードとメソッド名の間に自身の引数リストで表現  
 **Abs メソッドは v という名前の Vertex 型のレシーバを持つことを意味**
