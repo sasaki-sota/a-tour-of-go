@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4bee157-5c6f-4761-8f5a-b405e5d5432e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/indirection.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/methods-continud.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/methods-experience.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/methods-funcs.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/methods-pointers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/methods.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interface-nil.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces-implicitly.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces-value.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/interfaces.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/methods-with-pointer.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>

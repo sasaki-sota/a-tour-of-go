@@ -500,3 +500,80 @@ https://go-tour-jp.appspot.com/moretypes/1
     fmt.Println(p.Abs()) // OK
     
     変数の引数を取る関数は、特定の型の変数を取る必要がある
+
+
+##これがすごく参考になる
+    type Type5 struct {
+    	x, y float64
+    }
+    
+    func (v *Type5) Scale(f float64)  {
+    	v.x = v.x * f
+    	v.y = v.y * f
+    }
+    
+    func (v *Type5) Abs() float64  {
+    	return math.Sqrt(v.x*v.x + v.y*v.y)
+    }
+    
+    func main()  {
+    	v := &Type5{3, 4}
+    	fmt.Printf("Before scaling: %+v, Abs: %v\n", v, v.Abs())
+    	v.Scale(5)
+    	fmt.Printf("After scaling: %+v, Abs: %v\n", v, v.Abs())
+    }
+    
+    結果:
+    Before scaling: &{X:3 Y:4}, Abs: 5
+    After scaling: &{X:15 Y:20}, Abs: 25
+
+## インターフェース
+**メソッドの集まりで定義する**  
+そのメソッドの集まりを実装した値を、interface型の変数へ持たせることができる
+
+    基本的な書き方
+    type Abser interface {
+    	Abs() float64
+    }
+
+**わかりやすいまとめ**  
+-> インターフェースは明示的に宣言する必要はない
+
+    type I interface {
+    	M()
+    }
+    type T struct {
+    	S string
+    }
+    
+    func (t T) M()  {
+    	fmt.Println(t.S)
+    }
+    
+    func main()  {
+    	var i I=T{"hello"}
+    	i.M()
+    }
+    結果: hello
+
+インターフェースの値はタプルのように考えることができるようになっている  
+    
+    (value, type)
+
+**ポインタがあるかないかで変わってくる**  
+インターフェース自体の中にある具体的な値が nil の場合、メソッドは nil をレシーバーとして呼び出される
+
+    i = t
+    	describe(i)
+    	i.M()
+    
+    	i = &T{"hello"}
+    	describe(i)
+    	i.M()
+    	
+    	結果:
+            (<nil>, *main.T)
+            <nil>
+            (&{hello}, *main.T)
+            hello
+
