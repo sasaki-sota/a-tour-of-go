@@ -424,3 +424,79 @@ https://go-tour-jp.appspot.com/moretypes/1
 
     elem, ok = m[key]
     存在している場合はtrueになりそれ以外はfalse
+
+
+## メソッド(methods)
+**クラス( class )のしくみはありませんが、型にメソッド( method )を定義できる** 
+メソッド -> 特別なレシーバ( receiver )引数を関数に取る  
+レシーバー -> func キーワードとメソッド名の間に自身の引数リストで表現  
+**Abs メソッドは v という名前の Vertex 型のレシーバを持つことを意味**
+
+    type Vertex struct {
+    	X, Y float64
+    }
+    
+    func (v Vertex) Abs() float64 {
+    	return math.Sqrt(v.X*v.X + v.Y*v.Y)
+    }
+    
+    func main() {
+    	v := Vertex{3, 4}
+    	fmt.Println(v.Abs())
+    }
+    結果:
+    5
+> ここで3*3と4*4で9+16で25になりsqrtで平方根を求めるので5
+
+
+**通常での書き方**
+
+    func Ads(v Type1) float64  {
+    	return math.Sqrt(v.x*v.x + v.y*v.y)
+    }
+    
+    vからアクセスすることができるのはxとyとなる
+
+**structの型だけではなく、任意の型(type)にもメソッドを宣言できる**
+
+    type MyFloat float64
+    
+    func (f MyFloat) Abs() float64 {
+    	if f < 0 {
+    		return float64(-f)
+    	}
+    	return float64(f)
+    }
+    
+    func main() {
+    	f := MyFloat(-math.Sqrt2)
+    	fmt.Println(f.Abs())
+    }
+
+### ※メソッドのポイントの注意点
+    var v Vertex
+    ScaleFunc(v, 5)  // Compile error!
+    ScaleFunc(&v, 5) // OK
+    
+**↓**
+
+    var v Vertex
+    v.Scale(5)  // OK
+    p := &v
+    p.Scale(10) // OK
+    
+    メソッドがポインタレシーバである場合、呼び出し時に、変数、または、ポインタのいずれかのレシーバとして取ることができる
+
+### 逆の場合
+    var v Vertex
+    fmt.Println(AbsFunc(v))  // OK
+    fmt.Println(AbsFunc(&v)) // Compile error!
+    
+**↓**
+
+    var v Vertex
+    fmt.Println(v.Abs()) // OK
+    p := &v
+    fmt.Println(p.Abs()) // OK
+    
+    変数の引数を取る関数は、特定の型の変数を取る必要がある
