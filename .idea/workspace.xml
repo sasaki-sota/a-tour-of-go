@@ -2,11 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f4bee157-5c6f-4761-8f5a-b405e5d5432e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/empty-interface.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nil-interface-values.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/stringers.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/type-assertions.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/type-swithc.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/buffered-channels.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chanels.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/errors.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/goroutines.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/range-and-close.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readers.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/select.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>

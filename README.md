@@ -635,4 +635,82 @@ https://go-tour-jp.appspot.com/moretypes/1
     	fmt.Println(a, z)
     }
 
+## エラー(error)
+**エラーの状態を error 値で表現する**  
 
+    type MyError struct {
+    	When time.Time
+    	What string
+    }
+    
+    func (e *MyError) Error() string {
+    	return fmt.Sprintf("at %v, %s",
+    		e.When, e.What)
+    }
+    
+    func run() error {
+    	return &MyError{
+    		time.Now(),
+    		"it didn't work",
+    	}
+    }
+    
+    func main() {
+    	if err := run(); err != nil {
+    		fmt.Println(err)
+    	}
+    }
+    時間とエラーを表す表現
+
+#### stringsパッケージ
+> 文字列操作を行うシンプルな関数を集めたパッケージ
+
+**NewReader関数**  
+> func NewReader(s string) *Reader  
+  NewReaderは、sから読み込みを行う新しいReaderを返します。
+
+    func main() {
+    	r := strings.NewReader("Hello, Reader!")
+    
+    	b := make([]byte, 8)
+    	for {
+    		n, err := r.Read(b)
+    		fmt.Printf("n = %v err = %v b = %v\n", n, err, b)
+    		fmt.Printf("b[:n] = %q\n", b[:n])
+    		if err == io.EOF {
+    			break
+    		}
+    	}
+    }
+    結果:
+    n = 8 err = <nil> b = [72 101 108 108 111 44 32 82]
+    b[:n] = "Hello, R"
+    n = 6 err = <nil> b = [101 97 100 101 114 33 32 82]
+    b[:n] = "eader!"
+    n = 0 err = EOF b = [101 97 100 101 114 33 32 82]
+    b[:n] = ""
+
+## ゴールチン(goroutines)
+**非同期通信で利用する**  
+参考資料
+> https://qiita.com/chocomintkusoyaro/items/e154eaee4f2b08a5aebd
+
+## チャネル(Channels)
+ごめん。全くわからない。
+> https://qiita.com/taigamikami/items/fc798cdd6a4eaf9a7d5e  
+
+バッファを持つチャネルを初期化するには、 make の２つ目の引数にバッファの長さを与える  
+**少しわかる**
+    
+    package main
+    
+    import "fmt"
+    
+    func main()  {
+    	ch := make(chan int, 2)
+    	ch <- 1
+    	ch <- 2
+    	fmt.Println(<-ch)
+    	fmt.Println(<-ch)
+    }
+    結果： 1,2
